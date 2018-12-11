@@ -77,13 +77,15 @@
                   </button>
                   <a href="index.html" class="navbar-brand">KDE - JuK</a>
                 </div>
-
+<script>
+ 
+   </script>
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                   <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="#juk">About</a></li>
-                    <li><a href="#development">Development</a></li>
+                    <li><a onclick="myFunction1()">Development</a></li>
                     <li><a href="http://docs.kde.org/stable/en/kdemultimedia/juk/index.html">Wiki/Documentation</a></li>
-                    <li><a href="#screenshots">Screenshots</a></li>
+                    <li><a onclick="myFunction()">Screenshots</a></li>
                     <li class="dropdown">
                       <a data-toggle="dropdown" class="dropdown-toggle" href="#">Releases <b class="caret"></b></a>
                       <ul class="dropdown-menu">
@@ -177,14 +179,22 @@
 
             <div class="row">
                 <div class="col-md-7">
+                  <p>  </p><br/>
                   <a name="features"><h2 class="page-header" >Features</h2></a>
                   <ul>
                     <li>Collection list and multiple user defined playlists</li><li>Ability to scan directories to automatically import playlists and music files on start up</li><li>Dynamic Search Playlists that are automatically updated as fields in the collection change.</li><li>A Tree View mode where playlists are automatically generated for sets of albums, artists and genres.</li><li>Playlist history to indicate which files have been played and when.</li><li>Inline search for filtering the list of visible items.</li><li>The ability to guess tag information from the file name or using MusicBrainz online lookup.</li><li>File renamer that can rename files based on the tag content.</li><li>ID3v1, ID3v2 and Ogg Vorbis tag reading and editing support (via TagLib).</li>
                   </ul>
                 </div>
-
+<script>
+function myFunction1() {
+    var elmnt = document.getElementById("development");
+    elmnt.scrollIntoView();
+  
+}
+</script>
+              <p id="development">  </p><br/>
                 <div class="col-md-4">
-                  <a name="development"><h2 class="page-header">Development</h2></a>
+                  <a name="development"><h2 class="page-header" >Development</h2></a>
                     <p>If you'd like to get involved in JuK development, please send patches and
                       whatnot to <a href="mailto:kde-multimedia@kde.org">kde-multimedia@kde.org</a>.</p>
                       <p>General information on developing in and for KDE, including instructions on how
@@ -205,14 +215,19 @@
 -->
 
             </div>
-
+<script>
+function myFunction() {
+    var elmnt = document.getElementById("screenshots");
+    elmnt.scrollIntoView();
+}
+</script>
 
             <div class="row">
+              <p id="screenshots">   </p><br/>
 
                 <div class="col-lg-12">
-                  <a name="screenshots"><h2 class="page-header" style="margin-top:20px;">Screenshots</h2></a>
-                </div>
-
+                  <a name="screenshots"><h2 class="page-header" style="margin-top:20px;" >Screenshots</h2></a>
+                </div>  
                 <div class="col-sm-4">
                     <a href="img/screenshots/juk-3.10.1-main.png">
                       <img src="img/screenshots/juk-3.10.1-main.png" style="width:450px;height:210px;" class="img-responsive shadow">
@@ -312,5 +327,24 @@
     <!--all js here
     <script src="js/jquery.min.js" ></script>
     <script src="js/bootstrap.min.js"></script>
-     -->
+     --> <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+  
+
+    <script>  $(function() {
+  $('nav li').on('click', function() {
+    $(this).parent().find('li.active').removeClass('active');
+    $(this).addClass('active');
+    
+  });
+   
+ 
+});
+console.log('ready');</script>
+
+
+
+
+
 </html>
+  
